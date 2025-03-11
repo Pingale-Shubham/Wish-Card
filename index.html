@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Festival Wishing Card</title>
+</head>
+<body>
+
+<div class="container">
+  <h2>Create Your Festival Wishing Card</h2>
+
+  <div class="form-group">
+    <label for="festival">Select Festival:</label>
+    <select id="festival">
+      <option value="Makar Sankranti">मकर संक्रांति</option>
+    <option value="Shiv Jayanti">शिव जयंती</option>
+    <option value="Gudi Padwa">गुढी पाडवा</option>
+    <option value="Ram Navami">राम नवमी</option>
+    <option value="Hanuman Jayanti">हनुमान जयंती</option>
+    <option value="Nag Panchami">नाग पंचमी</option>
+    <option value="Raksha Bandhan">रक्षाबंधन</option>
+    <option value="Ganesh Chaturthi">गणेश चतुर्थी</option>
+    <option value="Navratri">नवरात्रि</option>
+    <option value="Dasara">दसरा</option>
+    <option value="Diwali">दिवाळी</option>
+    <option value="Bhau Beej">भाऊबीज</option>
+    <option value="Tulsi Vivah">तुळशी विवाह</option>
+    <option value="Christmas">ख्रिसमस</option>
+      <option value="Holi">Holi</option>
+      <option value="Christmas">Christmas</option>
+      <option value="New Year">New Year</option>
+      <option value="Birthday">Birthday</option>
+      <option value="Anniversary">Anniversary</option>
+      <option value="Eid">Eid</option>
+      <option value="Ganesh Chaturthi">Ganesh Chaturthi</option>
+      <option value="Raksha Bandhan">Raksha Bandhan</option>
+      <option value="Navratri">Navratri</option>
+      <option value="Dussehra">Dussehra</option>
+      <option value="Pongal">Pongal</option>
+      <option value="Baisakhi">Baisakhi</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="recipient">Recipient Name:</label>
+    <input type="text" id="recipient" placeholder="Enter recipient name">
+  </div>
+
+  <div class="form-group">
+    <label for="message">Your Message:</label>
+    <textarea id="message" rows="4" placeholder="Enter your festival message"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="sender">Your Name:</label>
+    <input type="text" id="sender" placeholder="Enter your name">
+  </div>
+
+  <div class="form-group">
+    <label for="image">Upload Image (Optional):</label>
+    <input type="file" id="image" accept="image/*">
+  </div>
+
+  <button id="generate-btn">Generate Card</button>
+  <div id="card-preview" class="hidden">
+    <img src="" alt="" id="preview-image">
+    <h3 id="preview-title"></h3>
+    <p id="preview-message"></p>
+    <p><strong>From:</strong> <span id="preview-sender"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>

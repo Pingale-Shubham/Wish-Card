@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-color: #c1c5c9;
+}
+
+/* Pulsating Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.container {
+  max-width: 700px;
+  max-height: 700px;
+  margin: 25px auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+.container:hover {
+  background-color: #948a8a;
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  transform: scale(1.02);
+  /* color: #000; */
+}
+
+.form-group select {
+  max-height: 150px;
+  overflow-y: auto;
+  font-weight: bold;
+}
+
+#card-preview {
+  width: 650px;
+  max-height: 650px;
+  min-height: 150px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #b3d8ff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  /* overflow: hidden; */
+}
+
+/* #card-preview:hover {
+  transform: scale(1.05);
+} */
+
+#card-message {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#card-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#card-sender {
+  font-size: 16px;
+  color: #777;
+  font-style: italic;
+}
+
+#download-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#download-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+#generate-btn {
+  background-color: #0ed3c9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 20px;
+}
+
+#generate-btn:hover {
+  background-color: #6b2610;
+  transform: scale(1.1);
+}
+
+/* Ensure downloaded image fits the container */
+#card-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  #card-preview {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #download-btn, #generate-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #card-title {
+    font-size: 20px;
+  }
+
+  #card-message {
+    font-size: 14px;
+  }
+
+  #card-sender {
+    font-size: 14px;
+  }
+
+  #download-btn, #generate-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
